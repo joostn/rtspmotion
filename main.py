@@ -28,6 +28,7 @@ def triggerMotionDebounced(args):
         print("Motion detected, but debounced.")
         return
     print("Motion detected!")
+    last_trigger_time = current_time
     publish_mqtt_message(args)
 
 def main():
